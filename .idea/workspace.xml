@@ -1,7 +1,9 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <project version="4">
   <component name="ChangeListManager">
-    <list default="true" id="dc8305f9-6ad3-4dfe-ba4d-1c2577e51a2a" name="Default" comment="" />
+    <list default="true" id="dc8305f9-6ad3-4dfe-ba4d-1c2577e51a2a" name="Default" comment="">
+      <change beforePath="$PROJECT_DIR$/src/main/java/hello.java" afterPath="$PROJECT_DIR$/src/main/java/hello.java" />
+    </list>
     <ignored path="$PROJECT_DIR$/out/" />
     <ignored path="$PROJECT_DIR$/target/" />
     <option name="EXCLUDED_CONVERTED_TO_IGNORED" value="true" />
@@ -26,15 +28,13 @@
       <file leaf-file-name="hello.java" pinned="false" current-in-tab="true">
         <entry file="file://$PROJECT_DIR$/src/main/java/hello.java">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="1720">
-              <caret line="158" column="77" lean-forward="true" selection-start-line="158" selection-start-column="77" selection-end-line="158" selection-end-column="77" />
+            <state relative-caret-position="1193">
+              <caret line="188" column="36" lean-forward="false" selection-start-line="188" selection-start-column="36" selection-end-line="188" selection-end-column="36" />
               <folding>
                 <element signature="imports" expanded="true" />
                 <element signature="method#solution#0;class#hello#0" expanded="false" />
                 <element signature="method#solution#1;class#hello#0" expanded="false" />
                 <element signature="method#solution#2;class#hello#0" expanded="false" />
-                <element signature="method#sortByValue#0;class#hello#0" expanded="false" />
-                <element signature="class#1691:1934" expanded="false" />
                 <element signature="method#sortByValueInt#0;class#hello#0" expanded="false" />
                 <element signature="method#sortByValueMap#0;class#hello#0" expanded="false" />
               </folding>
@@ -71,6 +71,9 @@
       </list>
     </option>
   </component>
+  <component name="Git.Settings">
+    <option name="RECENT_GIT_ROOT_PATH" value="$PROJECT_DIR$" />
+  </component>
   <component name="GradleLocalSettings">
     <option name="externalProjectsViewState">
       <projects_view />
@@ -101,6 +104,9 @@
     <option name="y" value="-19" />
     <option name="width" value="1096" />
     <option name="height" value="1088" />
+  </component>
+  <component name="ProjectLevelVcsManager" settingsEditedManually="true">
+    <ConfirmationsSetting value="1" id="Add" />
   </component>
   <component name="ProjectView">
     <navigator proportions="" version="1">
@@ -257,16 +263,15 @@
       <workItem from="1550394613212" duration="758000" />
       <workItem from="1550733983613" duration="12876000" />
       <workItem from="1550817635526" duration="11261000" />
-      <workItem from="1550846382661" duration="6574000" />
+      <workItem from="1550846382661" duration="8063000" />
     </task>
     <servers />
   </component>
   <component name="TimeTrackingManager">
-    <option name="totallyTimeSpent" value="31469000" />
+    <option name="totallyTimeSpent" value="32958000" />
   </component>
   <component name="ToolWindowManager">
     <frame x="-9" y="-9" width="1938" height="1098" extended-state="6" />
-    <editor active="true" />
     <layout>
       <window_info id="Palette" active="false" anchor="right" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33" sideWeight="0.5" order="3" side_tool="false" content_ui="tabs" />
       <window_info id="TODO" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33" sideWeight="0.5" order="6" side_tool="false" content_ui="tabs" />
@@ -277,8 +282,8 @@
       <window_info id="Capture Analysis" active="false" anchor="right" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33" sideWeight="0.5" order="3" side_tool="false" content_ui="tabs" />
       <window_info id="Event Log" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33" sideWeight="0.5" order="7" side_tool="true" content_ui="tabs" />
       <window_info id="Maven Projects" active="false" anchor="right" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33" sideWeight="0.5" order="3" side_tool="false" content_ui="tabs" />
-      <window_info id="Run" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="true" show_stripe_button="true" weight="0.32470334" sideWeight="0.5" order="2" side_tool="false" content_ui="tabs" />
-      <window_info id="Version Control" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="false" weight="0.33" sideWeight="0.5" order="7" side_tool="false" content_ui="tabs" />
+      <window_info id="Run" active="true" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="true" show_stripe_button="true" weight="0.32470334" sideWeight="0.5" order="2" side_tool="false" content_ui="tabs" />
+      <window_info id="Version Control" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33" sideWeight="0.5" order="7" side_tool="false" content_ui="tabs" />
       <window_info id="Spring" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33" sideWeight="0.5" order="7" side_tool="false" content_ui="tabs" />
       <window_info id="Terminal" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33" sideWeight="0.5" order="7" side_tool="false" content_ui="tabs" />
       <window_info id="Capture Tool" active="false" anchor="left" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33" sideWeight="0.5" order="2" side_tool="false" content_ui="tabs" />
@@ -346,8 +351,6 @@
             <element signature="method#solution#0;class#hello#0" expanded="false" />
             <element signature="method#solution#1;class#hello#0" expanded="false" />
             <element signature="method#solution#2;class#hello#0" expanded="false" />
-            <element signature="method#sortByValue#0;class#hello#0" expanded="false" />
-            <element signature="class#1691:1934" expanded="false" />
             <element signature="method#sortByValueInt#0;class#hello#0" expanded="false" />
             <element signature="method#sortByValueMap#0;class#hello#0" expanded="false" />
           </folding>
@@ -379,8 +382,6 @@
             <element signature="method#solution#0;class#hello#0" expanded="false" />
             <element signature="method#solution#1;class#hello#0" expanded="false" />
             <element signature="method#solution#2;class#hello#0" expanded="false" />
-            <element signature="method#sortByValue#0;class#hello#0" expanded="false" />
-            <element signature="class#1691:1934" expanded="false" />
             <element signature="method#sortByValueInt#0;class#hello#0" expanded="false" />
             <element signature="method#sortByValueMap#0;class#hello#0" expanded="false" />
           </folding>
@@ -452,15 +453,13 @@
     </entry>
     <entry file="file://$PROJECT_DIR$/src/main/java/hello.java">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="1720">
-          <caret line="158" column="77" lean-forward="true" selection-start-line="158" selection-start-column="77" selection-end-line="158" selection-end-column="77" />
+        <state relative-caret-position="1193">
+          <caret line="188" column="36" lean-forward="false" selection-start-line="188" selection-start-column="36" selection-end-line="188" selection-end-column="36" />
           <folding>
             <element signature="imports" expanded="true" />
             <element signature="method#solution#0;class#hello#0" expanded="false" />
             <element signature="method#solution#1;class#hello#0" expanded="false" />
             <element signature="method#solution#2;class#hello#0" expanded="false" />
-            <element signature="method#sortByValue#0;class#hello#0" expanded="false" />
-            <element signature="class#1691:1934" expanded="false" />
             <element signature="method#sortByValueInt#0;class#hello#0" expanded="false" />
             <element signature="method#sortByValueMap#0;class#hello#0" expanded="false" />
           </folding>

@@ -53,21 +53,6 @@ public class hello {
         return answer;
     }
 
-    public static List sortByValue(Map<String, ArrayList<Integer>> map){
-        List<String> list = new ArrayList<>();
-        list.addAll(map.keySet());
-
-        Collections.sort(list, new Comparator(){
-            public int compare(Object o1, Object o2) {
-                Object v1 = map.get(o1).get(0);
-                Object v2 = map.get(o2).get(0);
-                return ((Comparable)v1).compareTo(v2);
-            }
-        });
-        Collections.reverse(list);
-        return list;
-    }
-
     public static List sortByValueInt(Map<String, Integer> map){
         List<String> list = new ArrayList<>();
         list.addAll(map.keySet());
@@ -106,20 +91,12 @@ public class hello {
 
     public static int[] solution(String[] genres, int[] plays) {
         int[] answer = {};
-        int[][] playlist = new int[2][2];
         int answerCount = 0;
 
-        Map<String , int[][]> m = new HashMap<>();
-        Map<String,ArrayList<Integer>> map = new HashMap<>();
         Map<String, Integer> playsMap = new HashMap<>();
         Map<String, Object> genresMap = new HashMap<>();
 
         for (int i = 0; i < genres.length; i++) {
-//            map.computeIfAbsent(genres[i], k -> new ArrayList<Integer>()).add(plays[i]);
-//            m.computeIfAbsent(genres[i], k -> new int[2][2]);
-
-            //genresMap.computeIfAbsent(genres[i], k -> new HashMap<>());
-
             if(genresMap.get(genres[i]) == null){
                 Map<Integer, Integer> values = new HashMap<>();
                 values.put(i, plays[i]);
@@ -159,10 +136,9 @@ public class hello {
                 ArrayList<Integer> list = (ArrayList) sortByValueMap(values);
                 System.out.println(list);
 
-                Map<Integer, Integer> newValues = new HashMap<>();
+                int[] newValues = new int[2];
                 for(int k =0 ; k <=1; k++){
-                    int newKey = list.get(k);
-                    newValues.put(newKey, values.get(newKey));
+                    newValues[k] = list.get(k);
                 }
 
                 genresMap.put(key, newValues);
@@ -173,60 +149,23 @@ public class hello {
         Iterator iterator = genresMap.keySet().iterator();
         while (iterator.hasNext()){
             String k = iterator.next().toString();
-            System.out.println(k + ", " + genresMap.get(k));
+            System.out.print(k + ", [" );
+            int[] values = (int[])genresMap.get(k);
+            for(int i=0; i<values.length; i++){
+                System.out.print(values[i] + " ");
+            }
+            System.out.println("]");
         }
 
         int counter = 0;
         for(String genre: sortList){
-            Map<Integer, Integer> maps = (HashMap)genresMap.get(genre);
-            for(int num : maps.keySet()){
-                answer[counter] = num;
+            int[] values = (int[])genresMap.get(genre);
+            for(int k=0; k< values.length; k++){
+                answer[counter] = values[k];
                 counter++;
             }
         }
 
-        /**
-        ArrayList<Integer> lists = map.get(genres[i]);
-        if(lists.size() > 2){
-            for(int k=0; k< lists.size(); k++){
-                if(lists.get(k) == lists.get(k+1)){
-                    int v1 = playsMap.get(l)
-                }
-            }
-        }
-    }
-
-    for (String key : map.keySet()) {
-        ArrayList<Integer> lists = map.get(key);
-        lists.sort(Collections.reverseOrder());
-        map.put(key, lists);
-    }
-
-    int genreCounter = 0;
-    Iterator iterator1 = sortByValue(map).iterator();
-    while (iterator1.hasNext()){
-        System.out.println(iterator1.next().toString());
-        genreCounter++;
-    }
-
-    answer = new int[genreCounter*2];
-
-    ArrayList<String> list = (ArrayList)sortByValue(map);
-    int answerCounter = 0;
-
-    for(String key : list){
-        int count = 0;
-        ArrayList<Integer> valueList = map.get(key);
-        for (int value : valueList) {
-            if(count <2) {
-                answer[answerCounter] = playsMap.get(value);
-                answerCounter++;
-                count++;
-            }
-            else break;
-        }
-    }
-    **/
         return answer;
     }
 
@@ -241,13 +180,13 @@ public class hello {
         String[] genres2 = {"classic", "pop", "classic", "classic"};
         int[] plays2 = {500, 600, 150, 500};
 
-        String[] genres3 = {"classic", "pop", "classic", "classic", "classic"};
-        int[] plays3 = {500, 600, 150, 500, 500};
+        String[] genres3 = {"classic", "pop", "classic", "pop", "classic", "classic"};
+        int[] plays3 = {400,600,150,2500,500,500};
 
-        int[] result = solution(genres, plays);
+        int[] result = solution(genres3, plays3);
         System.out.println();
         for(int i : result){
-            System.out.print(i + "   ");
+            System.out.print(i + ", ");
         }
 
 
