@@ -1,3 +1,5 @@
+// 여행 경로
+
 function solution(tickets) {
   var answer = [];
   const q = [];
