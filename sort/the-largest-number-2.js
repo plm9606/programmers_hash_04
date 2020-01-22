@@ -34,3 +34,8 @@ console.log(solution([0, 0, 0, 1000]));
 console.log(solution([998, 9, 999]));
 console.log(solution([1, 10, 1000, 100]));
 console.log(solution([30, 33, 330, 335, 55]));
+
+/**
+ * 생각나는 테스트케이스는 다 통과하는데 제ㅈ출하면 다 틀림 ㅠㅠ
+ *
+ */
