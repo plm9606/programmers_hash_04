@@ -139,3 +139,89 @@ checkMagazine(
  *
  * for.. of에서는 return 사용 불가능했던거 같은데?
  */
+
+function segment(x, arr) {
+  // Write your code here
+  let DO_SORT = false;
+  let answer;
+  if (x === 1) {
+    arr.sort((a, b) => b - a);
+    answer = arr.shift();
+    return answer;
+  }
+  if (x === arr.length) {
+    arr.sort((a, b) => a - b);
+    answer = arr.shift();
+    return answer;
+  }
+
+  const temp = [];
+
+  // for(let i=0; i<=arr.length-x; i++){
+  //     let min = i;
+  //     for(let j=1; j<x; j++){
+  //         if(arr[i+j] < arr[min]){
+  //             min = i+j;
+  //         }
+  //     }
+  //     temp.push(arr[min])
+  // }
+
+  // function getMin(){
+  //     let min = Infinity;
+  //     memo.forEach(cost=>{
+  //         if(min > cost) min = cost;
+  //     })
+  //     return min;
+  // }
+
+  function getMin() {
+    sortedMemo.sort((a, b) => a - b);
+    return sortedMemo[0];
+  }
+
+  const memo = [];
+  const sortedMemo = [];
+
+  for (let i = 0; i <= arr.length - x; i++) {
+    if (i === 0) {
+      for (let j = 0; j < x; j++) {
+        memo.push(arr[i + j]);
+        sortedMemo.push(arr[i + j]);
+      }
+      let min = getMin();
+      temp.push(min);
+      const removal = memo.shift();
+      sortedMemo.splice(sortedMemo.indexOf(removal), 1);
+      continue;
+    }
+    const item = arr[i + x - 1];
+    memo.push(item);
+
+    // let min = getMin();
+    let min;
+    if (item < sortedMemo[0]) {
+      min = item;
+      sortedMemo.unshift(item);
+    } else {
+      min = sortedMemo[0];
+      sortedMemo.push(item);
+      DO_SORT = true;
+    }
+
+    if (temp[0] < min) temp.unshift(min);
+    else temp.push(min);
+    const removal = memo.shift();
+    sortedMemo.splice(sortedMemo.indexOf(removal), 1);
+    if (DO_SORT) {
+      sortedMemo.sort((a, b) => a - b);
+      DO_SORT = false;
+    }
+  }
+
+  // temp.sort((a,b)=>a-b);
+  // answer = temp.pop();
+
+  answer = temp.shift();
+  return answer;
+}
