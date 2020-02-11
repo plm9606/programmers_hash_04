@@ -15,5 +15,5 @@ function solution(heights) {
         answer.unshift(0);
     }
     answer.unshift(0)
-    return answer;
+        return answer;
 }
