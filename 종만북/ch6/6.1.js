@@ -1,4 +1,4 @@
-// 1부터 nRkwl 합을 반환
+// 1부터 n까지 합을 반환
 
 function sum(n){
     let sum = 0;

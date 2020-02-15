@@ -1,12 +1,12 @@
 
-// n개의 원소 중 m개의 원소를 고르는 모든 조합을 찾는 알고리즘
+// n개의 원소 중 순서 상관 없이 m개의 원소를 고르는 모든 조합을 찾는 알고리즘
 function pick(n,picked, toPick){
     if(toPick === 0) {
         console.log(picked)
         return;
     }
 
-    let smallest = picked.length===0?0:picked[picked.length-1]+1
+    let smallest = picked.length === 0 ? 0 : picked[picked.length-1]+1
 
     for(let i=smallest; i<n;i++){
         picked.push(i)
@@ -27,3 +27,29 @@ pick(4,[],2)
  * 주어진 변수?가 n,m 두개였는데 이두개만 사용해서 pick함수를 만드려 하니까 만들어지지 않았다. 
  * 문제를 해결하기 위해서 추가로 보조적인 변수나 자료구조를 만들 수 있다. (picked)
  */
+
+
+ // 순서까지 상관해서 고르는 경우
+function c1(str,toPick, picked, usedIdx){
+    if(toPick === 0){
+        console.log(picked);
+        return;
+    }
+    for(let i=0; i<str.length; i++){
+        let isUsed = false;
+        for(let j=0; j<usedIdx.length; j++){
+            if(usedIdx[j] === i) {
+                isUsed = true;
+                break;
+            }
+        }
+        if(isUsed) continue;
+        picked += str[i];
+        usedIdx.push(i)
+        c1(str, toPick-1, picked, usedIdx) ;
+        usedIdx.pop();
+        picked = picked.slice(0,-1)
+    }
+}
+
+c1("1234", 2, "", []);
