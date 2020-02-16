@@ -72,6 +72,8 @@ solution(5, 12);
 solution(2,11)
 solution(3,3)
 /**
+ * https://gurumee92.tistory.com/164
+ * 
  * set을 처음 사용해봤다. 그런데 순서가 없어서 다시 배열로 바꿔서 모든 원소를 차례로 탐색해야 했다. 
  * forEach같은 것들은 중간에 break가 안되서....
  * 
